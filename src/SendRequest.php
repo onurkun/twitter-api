@@ -5,7 +5,6 @@ class SendRequest
     private $options = array();
     private $allow_header = TRUE;
 
-    // json_encode(array("url" => "https://google.com"));
 
     public function __construct($url)
     {
