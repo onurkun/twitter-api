@@ -76,8 +76,13 @@ class SendRequest
         if (is_array($input) && count($input) > 0) {
             $this->options[CURLOPT_POST] = true;
             $this->options[CURLOPT_HTTPGET] = false;
-            $this->options[CURLOPT_POSTFIELDS] = http_build_query($input, '', '&');;
+            $this->options[CURLOPT_POSTFIELDS] = http_build_query($input, '', '&');
         }
+    }
+
+    public function setHeader($input)
+    {
+        $this->options[CURLOPT_HTTPHEADER] = $input;
     }
 
     public function setUserAgent($input)
@@ -88,6 +93,11 @@ class SendRequest
     public function setCookie($input)
     {
         $this->options[CURLOPT_COOKIE] = $input;
+    }
+
+     public function setInterface($input)
+    {
+        $this->options[CURLOPT_INTERFACE] = $input;
     }
 
     public function setHeaderOut($input)

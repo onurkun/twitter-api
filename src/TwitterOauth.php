@@ -12,6 +12,15 @@ class TwitterOauth
         $this->consumer_secret = $consumer_secret;
     }
 
+    /*
+    $input = array(
+    "username" => ,
+    "password" => ,
+    "consumer_key" => ,
+    "consumer_secret" => ,
+    )
+    */
+
     public function getAccessToken($input)
     {
 
