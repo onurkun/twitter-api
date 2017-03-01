@@ -73,6 +73,10 @@ class SendRequest
         );
     }
 
+    /*
+        $this->setPost("xxx" => "yyy");
+     */
+
     public function setPost($input)
     {
         if (is_array($input) && count($input) > 0) {
